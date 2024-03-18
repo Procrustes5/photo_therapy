@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: photo_therapy_production
-  username: photo_therapy
-  password: <%= ENV["PHOTO_THERAPY_DATABASE_PASSWORD"] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
