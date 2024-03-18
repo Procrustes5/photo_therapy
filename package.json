@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@vue/compiler-sfc": "^3.4.21",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6",
+    "vite-plugin-ruby": "^5.0.0"
+  },
+  "dependencies": {
+    "vue": "^3.4.21"
+  }
+}
