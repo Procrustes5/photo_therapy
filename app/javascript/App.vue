@@ -1,25 +1,14 @@
-<template>
-  <p>{{ state.message }}</p>
-</template>
-
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'App',
-  setup() {
-    return {
-      state: {
-        message: "Hello Vue3 + TypeScript!"
-      }
-    }
-  }
-})
+<script lang="ts" setup>
+import AppHeader from '@app/AppHeader.vue'
+import AppFooter from '@app/AppFooter.vue'
 </script>
-
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+<template>
+  <div class="app">
+    <app-header />
+    <router-view />
+    <app-footer />
+  </div>
+</template>
+<style lang="scss" scoped>
+  @import '@style/app.scss'
 </style>

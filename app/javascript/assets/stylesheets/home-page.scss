@@ -1,0 +1,17 @@
+.home-page {
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .top-image {
+    width: 100%;
+  }
+  .middle-image {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.4fr;
+    grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
+    gap: 12px;
+    margin: 12px 0px;
+  }
+}
