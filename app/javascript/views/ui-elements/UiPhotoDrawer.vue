@@ -19,7 +19,7 @@ const closeDrawer = () => {
   @click="closeDrawer"
   style="background: #303030;"
 >
-  <div class="drawer-wrapper" :class="{ vertImg: clickedImage==='/vite-dev/assets/images/IMG_9302.jpeg' }">
+  <div class="drawer-wrapper" :class="{ vertImg: clickedImage.includes('9302') }">
     <div class="img-wrapper">
       <el-image 
         :src="clickedImage" 

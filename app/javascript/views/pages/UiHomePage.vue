@@ -17,7 +17,6 @@ import Drawer from '@view/ui-elements/UiPhotoDrawer.vue'
 const homeStore = useHomeStore();
 const { clickedImage, isOpened } = storeToRefs(homeStore);
 const handleDrawer = (img) => {
-  console.log(img)
   clickedImage.value = img
   isOpened.value = true
 }
