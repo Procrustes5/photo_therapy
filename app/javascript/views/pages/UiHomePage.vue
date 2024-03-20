@@ -9,6 +9,9 @@ import image7 from '@/assets/images/IMG_9302.jpeg'
 import image8 from '@/assets/images/IMG_9303.jpeg'
 import image9 from '@/assets/images/IMG_9304.jpeg'
 import image10 from '@/assets/images/IMG_9305.jpeg'
+if (window.screen.width < 720 ) {
+
+}
 </script>
 <template>
   <div class="home-page">

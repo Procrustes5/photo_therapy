@@ -6,11 +6,24 @@
     <div class="header-title">
       <h1>PhotoTherapy</h1>
     </div>
-    <div class="header-menu-wrapper">
-      <div class="menu-item">The Sea</div>
-      <div class="menu-item">The Kyeongju</div>
-      <div class="menu-item">Punctun</div>
-      <div class="menu-item">The Busan</div>
+    <div class="header-scroll-menu">
+      <div class="header-menu-wrapper">
+        <div class="menu-item">
+          <span>The&nbsp;</span> 
+          <span>Sea</span>
+        </div>
+        <div class="menu-item">
+          <span>The&nbsp;</span>
+          <span>Kyeongju</span>
+        </div>
+        <div class="menu-item">
+          <span>Punctun</span>  
+        </div>
+        <div class="menu-item">
+          <span>The&nbsp;</span>
+          <span>Busan</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
