@@ -13,7 +13,7 @@ const closeDrawer = () => {
 <el-drawer
   class="drawer"
   v-model="isOpened"
-  :direction="ltr"
+  direction="ltr"
   :with-header="false"
   size="100%"
   @click="closeDrawer"
