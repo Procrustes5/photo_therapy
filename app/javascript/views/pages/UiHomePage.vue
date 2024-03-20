@@ -9,15 +9,10 @@ import image7 from '@/assets/images/IMG_9302.jpeg'
 import image8 from '@/assets/images/IMG_9303.jpeg'
 import image9 from '@/assets/images/IMG_9304.jpeg'
 import image10 from '@/assets/images/IMG_9305.jpeg'
-if (window.screen.width < 720 ) {
-
-}
 </script>
 <template>
   <div class="home-page">
-    <div class="top-image">
-      <el-image :src="image1" :key="contain" ></el-image>
-    </div>
+    <el-image :src="image1" :key="contain" ></el-image>
     <div class="middle-image">
       <el-image class="ml-img ml-img1" :src="image2"></el-image>
       <el-image class="ml-img ml-img2" :src="image3"></el-image>

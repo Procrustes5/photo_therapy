@@ -12,7 +12,7 @@
           <span>The&nbsp;</span> 
           <span>Sea</span>
         </div>
-        <div class="menu-item">
+        <div class="menu-item kj">
           <span>The&nbsp;</span>
           <span>Kyeongju</span>
         </div>
