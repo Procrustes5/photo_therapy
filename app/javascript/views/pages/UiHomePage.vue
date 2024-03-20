@@ -9,23 +9,36 @@ import image7 from '@/assets/images/IMG_9302.jpeg'
 import image8 from '@/assets/images/IMG_9303.jpeg'
 import image9 from '@/assets/images/IMG_9304.jpeg'
 import image10 from '@/assets/images/IMG_9305.jpeg'
+
+import { useHomeStore } from '@store/homeStore.ts'
+import { storeToRefs } from 'pinia';
+import Drawer from '@view/ui-elements/UiPhotoDrawer.vue'
+
+const homeStore = useHomeStore();
+const { clickedImage, isOpened } = storeToRefs(homeStore);
+const handleDrawer = (img) => {
+  console.log(img)
+  clickedImage.value = img
+  isOpened.value = true
+}
 </script>
 <template>
   <div class="home-page">
-    <el-image :src="image1" :key="contain" ></el-image>
+    <el-image :src="image1" :key="contain" @click="handleDrawer(image1)"></el-image>
     <div class="middle-image">
-      <el-image class="ml-img ml-img1" :src="image2"></el-image>
-      <el-image class="ml-img ml-img2" :src="image3"></el-image>
-      <el-image class="ml-img ml-img3" :src="image4"></el-image>
-      <el-image class="ml-img ml-img4" :src="image5"></el-image>
-      <el-image class="ml-img ml-img5" :src="image6"></el-image>
-      <el-image class="ml-img ml-img6" :src="image10"></el-image>
-      <el-image class="ml-img ml-img7" :key="contain" :src="image7"></el-image>
-      <el-image class="ml-img ml-img8" :key="contain" :src="image9"></el-image>
+      <el-image class="ml-img ml-img1" :src="image2" @click="handleDrawer(image2)"></el-image>
+      <el-image class="ml-img ml-img2" :src="image3" @click="handleDrawer(image3)"></el-image>
+      <el-image class="ml-img ml-img3" :src="image4" @click="handleDrawer(image4)"></el-image>
+      <el-image class="ml-img ml-img4" :src="image5" @click="handleDrawer(image5)"></el-image>
+      <el-image class="ml-img ml-img5" :src="image6" @click="handleDrawer(image6)"></el-image>
+      <el-image class="ml-img ml-img6" :src="image10" @click="handleDrawer(image10)"></el-image>
+      <el-image class="ml-img ml-img7" :key="contain" :src="image7" @click="handleDrawer(image7)"></el-image>
+      <el-image class="ml-img ml-img8" :key="contain" :src="image9" @click="handleDrawer(image9)"></el-image>
     </div>
     <div class="bottom-image">
-      <el-image :src="image8":key="contain" ></el-image>
+      <el-image :src="image8":key="contain" @click="handleDrawer(image8)"></el-image>
     </div>
+    <Drawer></Drawer>
   </div>
 </template>
 <style lang="scss" scoped>

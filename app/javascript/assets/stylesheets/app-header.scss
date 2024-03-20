@@ -7,6 +7,7 @@
   align-items: center;
   padding: 0px 12px;
   .header-title {
+    color: whitesmoke;
     margin-right: 12px;
   }
   .header-scroll-menu {
@@ -34,6 +35,7 @@
       display: flex;
       width: 130px;
       height: 90%;
+      color: whitesmoke;
       justify-content: center;
       margin-right: 8px;
       align-items: center;
@@ -54,6 +56,7 @@
     padding: 0px 12px;
     .header-title {
       margin-right: 12px;
+      color: whitesmoke;
       h1 {
         font-size: 20px;
       }
@@ -86,6 +89,7 @@
         justify-content: center;
         margin-right: 8px;
         align-items: center;
+        color: whitesmoke;
         span {
           font-size: 14px;
         }

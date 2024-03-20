@@ -47,6 +47,7 @@ export default defineConfig({
       '@view': path.resolve(__dirname, 'app/javascript/views'),
       '@app': path.resolve(__dirname, 'app/javascript/views/app'),
       '@pages': path.resolve(__dirname, 'app/javascript/views/pages'),
+      '@store': path.resolve(__dirname, 'app/javascript/stores'),
     },
   },
   test: {
