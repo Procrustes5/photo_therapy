@@ -10,5 +10,6 @@ import AppFooter from '@app/AppFooter.vue'
   </div>
 </template>
 <style lang="scss" scoped>
+  @import '@style/global.scss';
   @import '@style/app.scss'
 </style>

@@ -17,7 +17,7 @@ const closeDrawer = () => {
   :with-header="false"
   size="100%"
   @click="closeDrawer"
-  style="background: #303030;"
+  style="background: #0c1117;"
 >
   <div class="drawer-wrapper" :class="{ vertImg: clickedImage.includes('9302') }">
     <div class="img-wrapper">

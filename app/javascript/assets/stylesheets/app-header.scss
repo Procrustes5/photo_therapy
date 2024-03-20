@@ -40,7 +40,8 @@
       margin-right: 8px;
       align-items: center;
       &:hover {
-        background: #cbcbcb;
+        box-sizing: border-box;
+        border: solid 1px #cbcbcb;
       }
     }
   }
@@ -92,9 +93,11 @@
         color: whitesmoke;
         span {
           font-size: 14px;
+          font-weight: 500;
         }
         &:hover {
-          background: #cbcbcb;
+          box-sizing: border-box;
+          border: solid 1px #cbcbcb;
         }
       }
       .kj {

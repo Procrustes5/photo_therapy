@@ -41,7 +41,8 @@ const handleDrawer = (img) => {
   </div>
 </template>
 <style lang="scss" scoped>
-  @import '@style/home-page.scss'
+@import '@style/global.scss';
+@import '@style/home-page.scss'
 </style>
 <style lang="scss" scope>
 .ml-img {
