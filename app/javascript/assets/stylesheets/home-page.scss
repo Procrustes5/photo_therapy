@@ -16,7 +16,7 @@
     }
   }
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width:1023px) {
   .home-page {
     display: flex;
     flex-direction: column;
@@ -31,6 +31,24 @@
       grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
       gap: 8px;
       margin: 8px 0px;
+    }
+  }
+}
+@media screen and (max-width:767px) {
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .top-image {
+      width: 100%;
+    }
+    .middle-image {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 0.3fr 0.3fr 0.4fr;
+      grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
+      gap: 4px;
+      margin: 4px 0px;
     }
   }
 }
