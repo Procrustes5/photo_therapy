@@ -273,7 +273,6 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     font-style: italic;
   }
 }
-}
 .category {
   width: 100%;
   height: 100vh;
@@ -305,6 +304,8 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     font-weight: 600;
   }
 }
+}
+
 </style>
 <style lang="scss" scope>
 .category-img {
