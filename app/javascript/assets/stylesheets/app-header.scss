@@ -10,6 +10,13 @@
   .header-title {
     color: whitesmoke;
     margin-right: 12px;
+    h1 {
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none;
+      cursor: pointer;
+    }
   }
   .header-scroll-menu {
     width: fit-content;

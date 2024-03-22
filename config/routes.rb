@@ -7,4 +7,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "vue#index"
+  get '*path', to: 'vue#index', constraints: lambda { |req|
+    !req.path.starts_with?('/api/')
+  }
 end

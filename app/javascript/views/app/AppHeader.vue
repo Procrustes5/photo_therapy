@@ -1,10 +1,12 @@
 <script lang="ts" setup>
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 </script>
 <template>
   <div class="app-header">
     <div class="header-title">
-      <h1>PhotoTherapy</h1>
+      <h1 @click="router.push('/')">PhotoTherapy</h1>
     </div>
     <div class="header-scroll-menu">
       <div class="header-menu-wrapper">
@@ -17,7 +19,7 @@
           <span>Kyeongju</span>
         </div>
         <div class="menu-item">
-          <span>Punctun</span>  
+          <span>Punctum</span>  
         </div>
         <div class="menu-item">
           <span>The&nbsp;</span>
