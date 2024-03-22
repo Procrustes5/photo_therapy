@@ -37,8 +37,8 @@ const handleDrawer = (img) => {
     <div class="bottom-image">
       <el-image :src="image8" @click="handleDrawer(image8)"></el-image>
     </div>
-    <Drawer></Drawer>
   </div>
+  <Drawer></Drawer>
 </template>
 <style lang="scss" scoped>
 @import '@style/global.scss';
