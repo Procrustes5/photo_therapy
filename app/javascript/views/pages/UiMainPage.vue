@@ -9,7 +9,7 @@ import image10 from '@/assets/images/IMG_9305.jpeg'
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const images = [image8, image2, image3];
+const images = [image8, image2, image3, image4];
 const categoryImg = [image4, image6, image10, image1]
 const currentIndex = ref(0);
 const isShowingMain = ref(true);
@@ -19,7 +19,7 @@ setInterval(() => {
 const handleMainClick = () => {
   isShowingMain.value = false
 }
-const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
+const categories = ["The Sea", "Punctum","Kyeongju", "Busan"]
 </script>
 <template>
 <div class="header" @click="handleMainClick" v-if="isShowingMain">
@@ -31,7 +31,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   >
     <el-image :src="image" class="img"></el-image>
   </div>
-  <div class="fixed-content">
+  <div class="fixed-content" :class="{ active: currentIndex === 0 }">
     <div class="title">
       Phototherapy
     </div>
@@ -82,6 +82,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0;
   .title {
     margin: 70px 0px;
     font-size: 80px;
@@ -101,6 +102,9 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     color: whitesmoke;
     font-style: italic;
   }
+}
+.fixed-content.active {
+  opacity: 1;
 }
 @keyframes fadeInUp {
   to {

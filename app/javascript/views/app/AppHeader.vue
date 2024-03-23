@@ -14,15 +14,13 @@ const router = useRouter();
           <span>The&nbsp;</span>
           <span>Sea</span>
         </div>
-        <div class="menu-item kj">
-          <span>The&nbsp;</span>
+        <div class="menu-item">
           <span>Kyeongju</span>
         </div>
         <div class="menu-item">
           <span>Punctum</span>  
         </div>
         <div class="menu-item">
-          <span>The&nbsp;</span>
           <span>Busan</span>
         </div>
       </div>
