@@ -11,7 +11,7 @@ const router = useRouter();
     <div class="header-scroll-menu">
       <div class="header-menu-wrapper">
         <div class="menu-item">
-          <span>The&nbsp;</span> 
+          <span>The&nbsp;</span>
           <span>Sea</span>
         </div>
         <div class="menu-item kj">
