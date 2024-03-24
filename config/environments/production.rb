@@ -95,6 +95,4 @@ Rails.application.configure do
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
   # config.hosts << 'www.photo-therapy.onrender.com'
-  Rails.application.config.hosts << ['www.phototherapy.kr', 'www.photo-therapy.onrender.com', 'localhost']
-  Rails.application.routes.default_url_options[:port] = 3000
 end
