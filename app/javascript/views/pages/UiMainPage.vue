@@ -38,6 +38,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     <div class="sub-title">
       Light Up Your Life: Embrace the Power of Phototherapy
     </div>
+    <div class="prepare">This page is preparing for Official Launch</div>
   </div>
 </div>
 <div class="category" v-else>
@@ -100,7 +101,15 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     font-size: 24px;
     font-weight: 400;
     color: whitesmoke;
+    opacity: 0.8;
     font-style: italic;
+  }
+  .prepare {
+    color: whitesmoke;
+    margin-top: 30px;
+    border: 1px solid whitesmoke;
+    font-weight: 600;
+    padding: 4px 6px;
   }
 }
 .fixed-content.active {
@@ -226,6 +235,14 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     font-weight: 600;
   }
 }
+.prepare {
+    color: whitesmoke;
+    margin-top: 30px;
+    font-size: 12px;
+    border: 1px solid whitesmoke;
+    font-weight: 600;
+    padding: 4px 6px;
+  }
 }
 @media screen and (max-width:767px) {
 .header {
@@ -258,7 +275,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   justify-content: center;
   align-items: center;
   .title {
-    margin: 30px 0px;
+    margin: 20px 0px;
     font-size: 40px;
     font-weight: 600;
     color: whitesmoke;
@@ -275,6 +292,14 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     font-weight: 400;
     color: whitesmoke;
     font-style: italic;
+  }
+  .prepare {
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    font-size: 8px;
+    font-weight: 600;
+    padding: 2px 4px;
+    margin-top: 16px;
   }
 }
 .category {
@@ -304,7 +329,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   span {
     position: fixed;
     color: whitesmoke;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: 600;
   }
 }

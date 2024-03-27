@@ -4,13 +4,12 @@ import AppFooter from '@app/AppFooter.vue'
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-console.log(route)
 </script>
 <template>
   <div class="app">
     <app-header v-if="route.path!=='/'" />
     <router-view />
-    <!-- <app-footer /> -->
+    <app-footer v-if="route.path!=='/'" />
   </div>
 </template>
 <style lang="scss" scoped>
