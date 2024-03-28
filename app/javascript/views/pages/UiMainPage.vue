@@ -329,7 +329,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   span {
     position: fixed;
     color: whitesmoke;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
   }
 }
