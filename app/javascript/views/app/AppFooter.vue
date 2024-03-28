@@ -4,13 +4,15 @@ const currentYear = new Date().getFullYear();
 <template>
   <footer class="footer">
     <div class="footer-left">
+      <span class="contact-title">Contact</span>
+      <span class="contact-email">phototherapy.contact@gmail.com</span>
     </div>
     <div class="footer-right">
       <div class="photographer">
         <span class="photographer-upper">Photographed by</span>
         <span class="name">Kim Han</span>
         <div class="copyright">
-          © <span>{{ currentYear }}</span> Phototherapy. All rights reserved.
+          <span>{{ `© ${currentYear} Phototherapy. All rights reserved.` }}</span>
         </div>
       </div>
     </div>
@@ -31,6 +33,14 @@ const currentYear = new Date().getFullYear();
   }
   .footer-left {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .contact-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
   }
   .footer-right {
     width: 100%;
@@ -52,8 +62,9 @@ const currentYear = new Date().getFullYear();
     }
   }
   @media screen and (max-width:767px) {
-    span {
+  span {
     color: whitesmoke;
+    font-size: 8px;
   }
   .footer {
     box-sizing: border-box;
@@ -62,23 +73,35 @@ const currentYear = new Date().getFullYear();
     background: $main;
     padding: 25px;
   }
+  .footer-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    .contact-title {
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+  }
   .footer-right {
     .photographer {
       display: flex;
       flex-direction: column;
       .photographer-upper {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
       }
       .name {
-        font-size: 12px;
+        font-size: 10px;
         font-style: italic;
       }
     }
     .copyright {
+      display: flex;
+      justify-content: end;
       margin-top: 18px;
       color: whitesmoke;
-      font-size: 12px;
+      font-size: 8px;
     }
   }
   }
