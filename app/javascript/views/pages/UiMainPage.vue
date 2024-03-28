@@ -9,7 +9,7 @@ import image10 from '@/assets/images/IMG_9305.jpeg'
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const images = [image8, image2, image3];
+const images = [image8, image2, image3, image4];
 const categoryImg = [image4, image6, image10, image1]
 const currentIndex = ref(0);
 const isShowingMain = ref(true);
