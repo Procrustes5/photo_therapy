@@ -15,7 +15,7 @@ const currentIndex = ref(0);
 const isShowingMain = ref(true);
 setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % images.length;
-}, 5000);
+}, 3000);
 const handleMainClick = () => {
   isShowingMain.value = false
 }
