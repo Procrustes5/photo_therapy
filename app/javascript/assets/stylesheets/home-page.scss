@@ -1,4 +1,29 @@
 @import '@style/global.scss';
+.home-page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: $main;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
+  .top-image {
+    width: 100%;
+  }
+  .middle-image {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.3fr 0.3fr 0.4fr;
+    grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
+    gap: 12px;
+    margin: 12px 0px;
+  }
+}
+
+@keyframes fadeInUp {
+to {
+  opacity: 1; /* 완전히 불투명하게 */
+  transform: translateY(0); /* 원래 위치로 */
+}}
 @media screen and (max-width:1799px) {
   .home-page {
     display: flex;
