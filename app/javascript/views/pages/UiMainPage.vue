@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted, ref, onUnmounted } from "vue";
 import image1 from '@/assets/images/IMG_9295.jpeg'
 import image2 from '@/assets/images/IMG_9296.jpeg'
 import image3 from '@/assets/images/IMG_9297.jpeg'
@@ -7,27 +8,88 @@ import image6 from '@/assets/images/IMG_9300.jpeg'
 import image8 from '@/assets/images/IMG_9303.jpeg'
 import image10 from '@/assets/images/IMG_9305.jpeg'
 import { useRouter } from 'vue-router';
+import UiHomePage from "./UiHomePage.vue";
+import AppHeader from '@app/AppHeader.vue'
+import AppFooter from '@app/AppFooter.vue'
 
 const router = useRouter();
 const images = [image8, image2, image3, image4];
 const categoryImg = [image4, image6, image10, image1]
 const currentIndex = ref(0);
-const isShowingMain = ref(true);
+// スクロールを阻止する関数
+function preventScroll(e) {
+  e.preventDefault();
+}
+
+// スクロールを無効にする関数
+function disableScroll() {
+  // wheelとtouchmoveイベントにpreventScroll関数を適用し、スクロールを阻止
+  window.addEventListener('wheel', preventScroll, { passive: false });
+  window.addEventListener('touchmove', preventScroll, { passive: false });
+}
+
+// スクロールを再び有効にする関数
+function enableScroll() {
+  // wheelとtouchmoveイベントからpreventScroll関数を削除し、スクロールを再び可能に
+  window.removeEventListener('wheel', preventScroll);
+  window.removeEventListener('touchmove', preventScroll);
+}
+
+const headerRef = ref<HTMLDivElement>();
+const contentRef = ref<HTMLDivElement>();
+onMounted(() => {
+  const headerObserver = new IntersectionObserver(
+    (entries) => {
+      const firstEntry = entries[0];
+      if (firstEntry.isIntersecting) {
+        disableScroll();
+        setTimeout(enableScroll, 1200); 
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    {
+      root: null,
+      threshold: 0,
+    }
+  );
+  headerObserver.observe(headerRef.value!);
+
+  const contentObserver = new IntersectionObserver(
+    (entries) => {
+      const firstEntry = entries[0];
+      if (firstEntry.isIntersecting) {
+        const top = headerRef.value!.getBoundingClientRect().height
+        disableScroll();
+        setTimeout(enableScroll, 1200); 
+        window.scrollTo({ top: top + 50, behavior: "smooth" });
+      }
+    },
+    {
+      root: null,
+      threshold: 0,
+    }
+  );
+
+  contentObserver.observe(contentRef.value!);
+});
+
 setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % images.length;
 }, 3000);
 const handleMainClick = () => {
-  isShowingMain.value = false
+  const top = headerRef.value!.getBoundingClientRect().height
+  window.scrollTo({ top: top + 50, behavior: "smooth" });
 }
 const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
 </script>
 <template>
-<div class="header" @click="handleMainClick" v-if="isShowingMain">
+  <div class="wrapper">
+    <div class="header" ref="headerRef" @click="handleMainClick">
   <div 
     class="main-image" 
     v-for="(image, index) in images"
     :key="index"
-    :class="{ active: index === currentIndex }"
+    :class="{ active: index === currentIndex, notHorizontal: image !== image8 }"
   >
     <el-image :src="image" class="img"></el-image>
   </div>
@@ -41,7 +103,14 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     <div class="prepare">This page is preparing for Official Launch</div>
   </div>
 </div>
-<div class="category" v-else>
+<div class="sizedBox"></div>
+<div class="content" ref="contentRef">
+  <app-header/>
+  <UiHomePage></UiHomePage>
+  <app-footer/>
+</div>
+
+<!-- <div class="category" ref="contentRef">
   <div 
     class="category-item"
     v-for="(item, n) in categories"
@@ -51,18 +120,31 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     <el-image :src="categoryImg[n]" class="category-img"></el-image>
     <span>{{ item }}</span>
   </div>
-</div>
+</div> -->
+  </div>
+
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
+@import '@style/global.scss';
+.wrapper {
+  width: 100%;
+  height: 100%;
+  background: $main;
+}
 .header {
   width: 100%;
   height: 100%;
+  background: $main;
   position: relative;
   display: flex;
   align-items: center;
-  overflow: hidden;
+  justify-content: center;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
+}
+.sizedBox {
+  height: 50px;
+  background: $main;
 }
 .main-image {
   position: absolute;
@@ -71,6 +153,9 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   .img {
     height: 100%;
   }
+}
+.notHorizontal {
+  height: 100%;
 }
 .main-image.active {
   opacity: 1;
@@ -120,6 +205,10 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     opacity: 1; /* 완전히 불투명하게 */
     transform: translateY(0); /* 원래 위치로 */
 }
+}
+.content {
+  width: 100%;
+  height: 100%;
 }
 .category {
   width: 100%;
@@ -260,8 +349,12 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   transition: opacity 1s ease;
   opacity: 0;
   .img {
-    height: 100%;
+    width: 100%;
   }
+}
+.notHorizontal {
+  width: 100%;
+  height: auto;
 }
 .main-image.active {
   opacity: 1;
@@ -276,7 +369,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   align-items: center;
   .title {
     margin: 20px 0px;
-    font-size: 40px;
+    font-size: 25px;
     font-weight: 600;
     color: whitesmoke;
     -webkit-user-select:none;
@@ -288,7 +381,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
     animation: fadeInUp 1.0s ease-out forwards;
   }
   .sub-title {
-    font-size: 12px;
+    font-size: 8px;
     font-weight: 400;
     color: whitesmoke;
     font-style: italic;

@@ -26,7 +26,6 @@ const currentYear = new Date().getFullYear();
   .footer {
     box-sizing: border-box;
     width: 100%;
-    height: 300px;
     background: $main;
     padding: 40px;
     display: flex;
@@ -69,9 +68,9 @@ const currentYear = new Date().getFullYear();
   .footer {
     box-sizing: border-box;
     width: 100%;
-    height: 300px;
     background: $main;
     padding: 25px;
+    display: flex;
   }
   .footer-left{
     display: flex;
@@ -84,6 +83,8 @@ const currentYear = new Date().getFullYear();
     }
   }
   .footer-right {
+    height: fit-content;
+    justify-content: start;
     .photographer {
       display: flex;
       flex-direction: column;
@@ -102,6 +103,7 @@ const currentYear = new Date().getFullYear();
       margin-top: 18px;
       color: whitesmoke;
       font-size: 8px;
+      text-align: right;
     }
   }
   }

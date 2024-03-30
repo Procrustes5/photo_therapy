@@ -63,4 +63,7 @@ const router = useRouter();
   @import '@style/app-header.scss';
 </style>
 <style lang="scss" scope>
+@media screen and (max-width:767px) {
+  
+}
 </style>
