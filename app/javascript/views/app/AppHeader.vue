@@ -2,6 +2,10 @@
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
+
+const handleClickedCategory = () => {
+  router.push('/gallery')
+}
 </script>
 <template>
   <div class="app-header">
@@ -21,10 +25,10 @@ const router = useRouter();
         ><Menu /></el-icon>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item>The Sea</el-dropdown-item>
-            <el-dropdown-item>The Kyeongju</el-dropdown-item>
-            <el-dropdown-item>Punctum</el-dropdown-item>
-            <el-dropdown-item>The Busan</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory">The Sea</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory">The Kyeongju</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory">Punctum</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory">The Busan</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
@@ -64,6 +68,6 @@ const router = useRouter();
 </style>
 <style lang="scss" scope>
 @media screen and (max-width:767px) {
-  
+
 }
 </style>

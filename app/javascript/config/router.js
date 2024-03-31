@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import HomePage from '@pages/UiHomePage.vue'
 import MainPage from '@pages/UiMainPage.vue'
+import GalleryPage from '@pages/UiGallery.vue'
 
 export const routes = [
   {
@@ -12,6 +13,10 @@ export const routes = [
   {
     path: '/photo',
     component: HomePage,
+  },
+  {
+    path: '/gallery',
+    component: GalleryPage,
   },
   {
     path: '/:pathMatch(.*)*',
