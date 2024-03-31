@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   if (process.env.NODE_ENV === 'production') {
-    const imagea = import('/opt/render/project/src/app/javascript/assets/images/photo/Collage/AdobePhotoshopExpress_2024-01-21_03-04-46+0900.jpg');
+    const imagea = import('@/assets/images/photo/Conatus/84200007.jpg');
   }
 const images = [1 ,1 ,1 ,1, 1, 1, 1, 1]
 </script>
