@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useHomeStore } from '@store/homeStore.ts'
 import { storeToRefs } from 'pinia';
-import { p } from 'vite';
 
 const homeStore = useHomeStore();
 const { clickedImage, isOpened } = storeToRefs(homeStore);

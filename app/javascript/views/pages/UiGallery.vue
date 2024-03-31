@@ -25,6 +25,7 @@ const images = [1 ,1 ,1 ,1, 1, 1, 1, 1]
   </div>
 </template>
 <style lang="scss" scoped>
+@import '@style/global.scss';
   .main-wrapper {
     width: 100%;
     display: flex;

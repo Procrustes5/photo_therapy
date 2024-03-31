@@ -16,21 +16,18 @@ const router = useRouter();
 const images = [image8, image2, image3, image4];
 const categoryImg = [image4, image6, image10, image1]
 const currentIndex = ref(0);
-// スクロールを阻止する関数
+const isSlideShown = ref(true)
+
 function preventScroll(e) {
   e.preventDefault();
 }
 
-// スクロールを無効にする関数
 function disableScroll() {
-  // wheelとtouchmoveイベントにpreventScroll関数を適用し、スクロールを阻止
   window.addEventListener('wheel', preventScroll, { passive: false });
   window.addEventListener('touchmove', preventScroll, { passive: false });
 }
 
-// スクロールを再び有効にする関数
 function enableScroll() {
-  // wheelとtouchmoveイベントからpreventScroll関数を削除し、スクロールを再び可能に
   window.removeEventListener('wheel', preventScroll);
   window.removeEventListener('touchmove', preventScroll);
 }
@@ -42,9 +39,12 @@ onMounted(() => {
     (entries) => {
       const firstEntry = entries[0];
       if (firstEntry.isIntersecting) {
+        isSlideShown.value = true
         disableScroll();
         setTimeout(enableScroll, 1200); 
         window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        isSlideShown.value = false
       }
     },
     {
@@ -105,7 +105,7 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
 </div>
 <div class="sizedBox"></div>
 <div class="content" ref="contentRef">
-  <app-header/>
+  <app-header v-if="!isSlideShown" class="main-header"/>
   <UiHomePage></UiHomePage>
   <app-footer/>
 </div>
@@ -130,6 +130,10 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   width: 100%;
   height: 100%;
   background: $main;
+}
+.main-header {
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-out forwards;
 }
 .header {
   width: 100%;
@@ -434,5 +438,11 @@ const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
   img {
     object-fit: cover;
   }
+}
+img {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* 標準構文 */
 }
 </style>
