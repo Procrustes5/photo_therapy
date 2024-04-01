@@ -1,14 +1,11 @@
 <script lang="ts" setup>
-  if (process.env.NODE_ENV === 'production') {
-    const imagea = import('@/assets/images/photo/Conatus/84200007.jpg');
-  }
 const images = [1 ,1 ,1 ,1, 1, 1, 1, 1]
 </script>
 <template>
   <div class="main-wrapper">
     <div class="main-image-wrapper">
       <div class="main-image">
-        <el-image :src="imagea ?? null"></el-image>
+
       </div>
     </div>
     <div class="content-wrapper">
