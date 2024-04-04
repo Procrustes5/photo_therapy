@@ -35,7 +35,7 @@ const handleDrawer = (img) => {
       <el-image class="ml-img ml-img8" :src="image9" @click="handleDrawer(image9)"></el-image>
     </div>
     <div class="bottom-image">
-      <el-image :src="image8" @click="handleDrawer(image8)"></el-image>
+      <el-image class="btm-img" :src="image8" @click="handleDrawer(image8)"></el-image>
     </div>
   </div>
   <Drawer></Drawer>
@@ -49,6 +49,9 @@ const handleDrawer = (img) => {
   img {
     object-fit: cover;
   }
+}
+.btm-img {
+  width: 100%;
 }
 .ml-img1 {
     grid-row: 1 / 2;
