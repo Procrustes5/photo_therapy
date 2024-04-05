@@ -80,7 +80,7 @@ const handleMainClick = () => {
   const top = headerRef.value!.getBoundingClientRect().height
   window.scrollTo({ top: top + 50, behavior: "smooth" });
 }
-const categories = ["The Sea", "Punctum","The Kyeongju", "The Busan"]
+const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
 </script>
 <template>
   <div class="wrapper">

@@ -3,8 +3,8 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
-const handleClickedCategory = () => {
-  router.push('/gallery')
+const handleClickedCategory = (category) => {
+  router.push(`/${category}`)
 }
 </script>
 <template>
@@ -25,10 +25,10 @@ const handleClickedCategory = () => {
         ><Menu /></el-icon>
         <template #dropdown>
           <el-dropdown-menu>
-            <el-dropdown-item @click="handleClickedCategory">The Sea</el-dropdown-item>
-            <el-dropdown-item @click="handleClickedCategory">The Kyeongju</el-dropdown-item>
-            <el-dropdown-item @click="handleClickedCategory">Punctum</el-dropdown-item>
-            <el-dropdown-item @click="handleClickedCategory">The Busan</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory('conatus')">Conatus</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory('moment')">The moment</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory('gyeongju')">Gyeongju</el-dropdown-item>
+            <el-dropdown-item @click="handleClickedCategory('docu')">Docu&Snap</el-dropdown-item>
           </el-dropdown-menu>
         </template>
       </el-dropdown>
