@@ -168,7 +168,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         }
         .en {
           font-size: 35px;
-          margin-left: 10px;
+          margin-bottom: 8px;
           letter-spacing: 2px;
         }
       }

@@ -100,7 +100,7 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
     <div class="sub-title">
       Light Up Your Life: Embrace the Power of Phototherapy
     </div>
-    <div class="prepare">This page is preparing for Official Launch</div>
+    <!-- <div class="prepare">This page is preparing for Official Launch</div> -->
   </div>
 </div>
 <div class="sizedBox"></div>
@@ -109,18 +109,6 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   <UiHomePage></UiHomePage>
   <app-footer/>
 </div>
-
-<!-- <div class="category" ref="contentRef">
-  <div 
-    class="category-item"
-    v-for="(item, n) in categories"
-    :key="n"
-    @click="router.push('/photo')"
-  >
-    <el-image :src="categoryImg[n]" class="category-img"></el-image>
-    <span>{{ item }}</span>
-  </div>
-</div> -->
   </div>
 
 </template>
@@ -175,7 +163,7 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   opacity: 0;
   .title {
     margin: 70px 0px;
-    font-size: 80px;
+    font-size: 90px;
     font-weight: 600;
     color: whitesmoke;
     -webkit-user-select:none;
@@ -278,7 +266,7 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   align-items: center;
   .title {
     margin: 50px 0px;
-    font-size: 60px;
+    font-size: 70px;
     font-weight: 600;
     color: whitesmoke;
     -webkit-user-select:none;
@@ -372,8 +360,8 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   justify-content: center;
   align-items: center;
   .title {
-    margin: 20px 0px;
-    font-size: 25px;
+    margin: 30px 0px;
+    font-size: 40px;
     font-weight: 600;
     color: whitesmoke;
     -webkit-user-select:none;

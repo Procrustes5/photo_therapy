@@ -32,34 +32,6 @@ const handleClickedCategory = (category) => {
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-
-        <!-- class="header-menu"
-        mode="horizontal" 
-        background-color="transparent"
-        :popper-offset="4"
-      > -->
-        <!-- <el-sub-menu index="1">
-
-        </el-sub-menu>
-      </el-drop> -->
-
-      <!-- <div class="header-menu-wrapper">
-        <div class="menu-item">
-          <span>The&nbsp;</span>
-          <span>Sea</span>
-        </div>
-        <div class="menu-item kj">
-          <span>The&nbsp;</span>
-          <span>Kyeongju</span>
-        </div>
-        <div class="menu-item">
-          <span>Punctum</span>  
-        </div>
-        <div class="menu-item">
-          <span>The&nbsp;</span>
-          <span>Busan</span>
-        </div>
-      </div> -->
     </div>
   </div>
 </template>
