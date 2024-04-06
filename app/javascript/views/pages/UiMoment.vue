@@ -32,7 +32,16 @@ import image30 from '@/assets/images/moment/30.jpeg';
 import image31 from '@/assets/images/moment/31.jpeg';
 import image32 from '@/assets/images/moment/32.jpeg';
 import image33 from '@/assets/images/moment/33.jpeg';
+import { useHomeStore } from '@store/homeStore.ts'
+import { storeToRefs } from 'pinia';
+import Drawer from '@view/ui-elements/UiPhotoDrawer.vue'
 
+const homeStore = useHomeStore();
+const { clickedImage, isOpened } = storeToRefs(homeStore);
+const handleDrawer = (img) => {
+  clickedImage.value = img
+  isOpened.value = true
+}
 const images = [image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30, image31, image32, image33]
 </script>
 <template>
@@ -55,11 +64,12 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
           :key="index"
           class="content-img"
         >
-        <el-image :src="image" class="img"></el-image>
+        <el-image :src="image" class="img" @click="handleDrawer(image)"></el-image>
         </div>
       </div>
     </div>
   </div>
+  <Drawer></Drawer>
 </template>
 <style lang="scss" scoped>
 @import '@style/global.scss';
