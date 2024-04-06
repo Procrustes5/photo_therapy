@@ -31,7 +31,7 @@ const handleDrawer = (img) => {
   clickedImage.value = img
   isOpened.value = true
 }
-const images = [image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22]
+const images = [image2, image3, image4, image5, image6, image7, image8, image9, image1, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22]
 </script>
 <template>
   <div class="main-wrapper">
