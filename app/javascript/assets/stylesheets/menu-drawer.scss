@@ -1,0 +1,14 @@
+.drawer {
+  .menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .menu {
+      color: whitesmoke;
+      height: 30px;
+      font-size: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  }
+}

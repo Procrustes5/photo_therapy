@@ -8,15 +8,22 @@ import image6 from '@/assets/images/IMG_9300.jpeg'
 import image8 from '@/assets/images/IMG_9303.jpeg'
 import image10 from '@/assets/images/IMG_9305.jpeg'
 import { useRouter } from 'vue-router';
+import { useMenuStore } from '@store/menuStore.ts'
+import { storeToRefs } from 'pinia';
 import UiHomePage from "./UiHomePage.vue";
 import AppHeader from '@app/AppHeader.vue'
 import AppFooter from '@app/AppFooter.vue'
 
+const menuStore = useMenuStore();
+const { clickedIcon, isOpened } = storeToRefs(menuStore);
 const router = useRouter();
 const images = [image8, image2, image3, image4];
 const categoryImg = [image4, image6, image10, image1]
 const currentIndex = ref(0);
 const isSlideShown = ref(true)
+const closeMenu = () => {
+  isOpened.value = false
+}
 
 function preventScroll(e) {
   e.preventDefault();
@@ -43,6 +50,7 @@ onMounted(() => {
         disableScroll();
         setTimeout(enableScroll, 1200); 
         window.scrollTo({ top: 0, behavior: "smooth" });
+        closeMenu();
       } else {
         isSlideShown.value = false
       }

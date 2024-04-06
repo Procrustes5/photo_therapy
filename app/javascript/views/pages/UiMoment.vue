@@ -35,6 +35,7 @@ import image33 from '@/assets/images/moment/33.jpeg';
 import { useHomeStore } from '@store/homeStore.ts'
 import { storeToRefs } from 'pinia';
 import Drawer from '@view/ui-elements/UiPhotoDrawer.vue'
+import Menu from '@view/ui-elements/UiMenuDrawer.vue'
 
 const homeStore = useHomeStore();
 const { clickedImage, isOpened } = storeToRefs(homeStore);
@@ -70,6 +71,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
     </div>
   </div>
   <Drawer></Drawer>
+  <Menu></Menu>
 </template>
 <style lang="scss" scoped>
 @import '@style/global.scss';

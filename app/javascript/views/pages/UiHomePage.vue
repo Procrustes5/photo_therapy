@@ -13,6 +13,7 @@ import image10 from '@/assets/images/IMG_9305.jpeg'
 import { useHomeStore } from '@store/homeStore.ts'
 import { storeToRefs } from 'pinia';
 import Drawer from '@view/ui-elements/UiPhotoDrawer.vue'
+import Menu from '@view/ui-elements/UiMenuDrawer.vue'
 
 const homeStore = useHomeStore();
 const { clickedImage, isOpened } = storeToRefs(homeStore);
@@ -39,6 +40,7 @@ const handleDrawer = (img) => {
     </div>
   </div>
   <Drawer></Drawer>
+  <Menu></Menu>
 </template>
 <style lang="scss" scoped>
 @import '@style/global.scss';
