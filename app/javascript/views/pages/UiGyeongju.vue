@@ -68,7 +68,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
       justify-content: center;
       .main-image {
         width: 80%;
-        height: 80vh;
+        height: 90vh;
         display: flex;
         justify-content: center;
         .img {
@@ -78,7 +78,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
       }
       .fixed-content {
         width: 80%;
-        height: 80vh;
+        height: 90vh;
         position: absolute;
         display: flex;
         justify-content: space-between;
