@@ -33,7 +33,7 @@ import image31 from '@/assets/images/moment/31.jpeg';
 import image32 from '@/assets/images/moment/32.jpeg';
 import image33 from '@/assets/images/moment/33.jpeg';
 
-const images = [image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image26, image27, image28, image29, image30, image31, image32, image33]
+const images = [image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image14, image15, image16, image17, image18, image19, image20, image21, image22, image23, image24, image25, image26, image27, image28, image29, image30, image31, image32, image33]
 </script>
 <template>
   <div class="main-wrapper">
@@ -41,10 +41,13 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
       <div class="main-image">
         <el-image :src="image1" class="img"></el-image>
       </div>
+      <div class="fixed-content">
+        <span>The Moment</span>
+      </div>
     </div>
     <div class="content-wrapper">
       <div class="content-header">
-        <span>This page is preparing to release</span>
+        <span>PHOTOS</span>
       </div>
       <div class="content">
         <div 
@@ -80,6 +83,20 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
           height: 100%;
         }
       }
+      .fixed-content {
+        width: 80%;
+        height: 80vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          font-size: 100px;
+          font-weight: 800;
+          color: white;
+          text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.8);
+        }
+      }
     }
     .content-wrapper {
       width: 100%;
@@ -93,6 +110,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         span {
           color: whitesmoke;
           font-size: 18px;
+          font-weight: 600;
         }
       }
       .content {
@@ -110,6 +128,76 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         }
       }
     }
+  }
+  @media screen and (max-width:767px) {
+  .main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .main-image-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      .main-image {
+        width: 80%;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .fixed-content {
+        width: 80%;
+        height: 80vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+          text-align: center;
+          font-size: 40px;
+          font-weight: 800;
+          color: white;
+          text-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.8);
+        }
+      }
+    }
+    .content-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .content-header {
+        margin: 15px 0px;
+        width: 80%;
+        span {
+          color: whitesmoke;
+          font-size: 14px;
+          font-weight: 600;
+        }
+      }
+      .content {
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5px;
+        padding: 0px 30px;
+        .content-img {
+          height: 160px;
+          .img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+
   }
 </style>
 <style lang="scss" scope>
