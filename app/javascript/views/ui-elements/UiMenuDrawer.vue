@@ -12,6 +12,18 @@ const closeMenu = () => {
 const handleClickedCategory = (category) => {
   router.push(`/${category}`)
 }
+const menuSize = computed(() => {
+  if (window.innerWidth < 500) {
+    return '40%'
+  } else if (window.innerWidth < 769) {
+    return '25%'
+  } else if (window.innerWidth < 1025) {
+    return '20%'
+  } else {
+    return '15%'
+  }
+  
+})
 </script>
 <template>
 <el-drawer
@@ -19,15 +31,24 @@ const handleClickedCategory = (category) => {
   v-model="isOpened"
   direction="rtl"
   :with-header="false"
-  size="20%"
+  :size="menuSize"
   @click="closeMenu"
   style="background: #0c1117;"
 >
+<div class="title">▼ Gallery</div>
 <div class="menu-wrapper">
-  <div class="menu" @click="handleClickedCategory('conatus')">Conatus</div>
-  <div class="menu" @click="handleClickedCategory('moment')">The Moment</div>
-  <div class="menu" @click="handleClickedCategory('gyeongju')">Gyeongju</div>
-  <div class="menu" @click="handleClickedCategory('docu')">Docu&Snap</div>
+  <div class="menu" @click="handleClickedCategory('conatus')">
+    <span>Conatus</span>
+  </div>
+  <div class="menu" @click="handleClickedCategory('moment')">
+    <span>The Moment</span>
+  </div>
+  <div class="menu" @click="handleClickedCategory('gyeongju')">
+    <span>Gyeongju</span>
+  </div>
+  <div class="menu" @click="handleClickedCategory('docu')">
+    <span>Docu&Snap</span>
+  </div>
 </div>
 </el-drawer>
 </template>
@@ -36,5 +57,11 @@ const handleClickedCategory = (category) => {
 @import '@style/menu-drawer.scss'
 </style>
 <style lang="scss" scope>
-
+.menu-img {
+  width: 100%;
+  .el-image__inner {
+    width: 100%;
+    height: 40px;
+  }
+}
 </style>
