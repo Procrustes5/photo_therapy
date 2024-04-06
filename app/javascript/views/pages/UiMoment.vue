@@ -121,7 +121,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         margin: 15px 0px;
         width: 80%;
         span {
-          color: whitesmoke;
+        color: whitesmoke;
           font-size: 18px;
           font-weight: 600;
         }
@@ -133,7 +133,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         gap: 5px;
         padding: 0px 30px;
         .content-img {
-          height: 30vh;
+          height: 35vh;
           .img {
             width: 100%;
             height: 100%;

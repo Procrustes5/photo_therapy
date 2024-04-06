@@ -130,7 +130,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         gap: 5px;
         padding: 0px 30px;
         .content-img {
-          height: 160px;
+          height: 35vh;
           .img {
             width: 100%;
             height: 100%;
