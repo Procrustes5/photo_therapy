@@ -6,6 +6,8 @@ import DocuPage from '@pages/UiDocu.vue'
 import GyeongjuPage from '@pages/UiGyeongju.vue'
 import MomentPage from '@pages/UiMoment.vue'
 import ConatusPage from '@pages/UiConatus.vue'
+import DirectionPage from '@pages/UiDirection.vue'
+import ProfilePage from '@pages/UiProfile.vue'
 
 export const routes = [
   {
@@ -32,6 +34,14 @@ export const routes = [
   {
     path: '/conatus',
     component: ConatusPage,
+  },
+  {
+    path: '/direction',
+    component: DirectionPage,
+  },
+  {
+    path: '/profile',
+    component: ProfilePage,
   },
   {
     path: '/:pathMatch(.*)*',

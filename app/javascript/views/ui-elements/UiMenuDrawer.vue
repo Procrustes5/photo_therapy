@@ -50,6 +50,15 @@ const menuSize = computed(() => {
     <span>Docu&Snap</span>
   </div>
 </div>
+<div class="title">▼ About</div>
+<div class="menu-wrapper">
+  <div class="menu" @click="handleClickedCategory('direction')">
+    <span>Direction</span>
+  </div>
+  <div class="menu" @click="handleClickedCategory('profile')">
+    <span>Profile</span>
+  </div>
+</div>
 </el-drawer>
 </template>
 
