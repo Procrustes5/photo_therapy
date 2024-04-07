@@ -24,7 +24,7 @@ const handleDrawer = (img) => {
 </script>
 <template>
   <div class="home-page" ref="contentRef">
-    <el-image :src="image1" @click="handleDrawer(image1)"></el-image>
+    <el-image class="top-image" :src="image1" @click="handleDrawer(image1)"></el-image>
     <div class="middle-image">
       <el-image class="ml-img ml-img1" :src="image2" @click="handleDrawer(image2)"></el-image>
       <el-image class="ml-img ml-img2" :src="image3" @click="handleDrawer(image3)"></el-image>
