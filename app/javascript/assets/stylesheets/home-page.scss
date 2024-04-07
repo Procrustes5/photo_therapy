@@ -14,7 +14,7 @@
     display: grid;
     grid-template-columns: 0.3fr 0.3fr 0.4fr;
     grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
-    gap: 12px;
+    gap: 8px;
     margin: 12px 0px;
   }
   .bottom-image {
@@ -31,6 +31,9 @@ to {
   .home-page {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 12px;
     width: 100%;
     background: $main;
     opacity: 0;
@@ -43,7 +46,7 @@ to {
       display: grid;
       grid-template-columns: 0.3fr 0.3fr 0.4fr;
       grid-template-rows: 0.4fr 0.25fr 0.25fr 0.5fr;
-      gap: 12px;
+      gap: 8px;
       margin: 12px 0px;
     }
     .bottom-image {
@@ -62,6 +65,8 @@ to {
     flex-direction: column;
     width: 100%;
     background: $main;
+    box-sizing: border-box;
+    padding: 0px 12px;
     .top-image {
       width: 100%;
     }
@@ -83,6 +88,8 @@ to {
     display: flex;
     flex-direction: column;
     width: 100%;
+    box-sizing: border-box;
+    padding: 0px 12px;
     background: $main;
     opacity: 0;
     animation: fadeInUp 1.5s ease-out forwards;
