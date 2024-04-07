@@ -27,10 +27,10 @@ const closeDrawer = () => {
       >
       </el-image>
     </div>
-    <div class="story-wrapper">
+    <!-- <div class="story-wrapper">
       <h3>Photo</h3>
       <p>Story about the Photo</p>
-    </div>
+    </div> -->
   </div>
 </el-drawer>
 </template>
