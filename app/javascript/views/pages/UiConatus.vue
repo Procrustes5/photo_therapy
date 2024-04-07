@@ -141,7 +141,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
       display: flex;
       justify-content: center;
       .main-image {
-        width: 80%;
+        width: 90%;
         height: 80vh;
         display: flex;
         justify-content: center;
@@ -152,7 +152,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         }
       }
       .fixed-content {
-        width: 80%;
+        width: 90%;
         height: 80vh;
         position: absolute;
         display: flex;
@@ -174,7 +174,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
       align-items: center;
       .content-header {
         margin: 15px 0px;
-        width: 80%;
+        width: 90%;
         span {
           color: whitesmoke;
           font-size: 14px;
@@ -182,7 +182,7 @@ const images = [image2, image3, image4, image5, image6, image7, image8, image9, 
         }
       }
       .content {
-        width: 80%;
+        width: 90%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 5px;
