@@ -42,7 +42,7 @@ setInterval(() => {
 <style lang="scss" scoped>
 .page-container {
   width: 100%;
-  height: 100%;
+
   display: flex;
   .page-left {
     width: 100%;
@@ -111,6 +111,40 @@ setInterval(() => {
   box-shadow: 0 0 8px 2px #fff; /* 빛나는 효과 */
 }
 
-
+@media screen and (max-width:767px) {
+  .page-container {
+    flex-direction: column;
+    margin: 10px 0px;
+    .page-left {
+      margin: 20px 0px;
+    }
+    .page-right {
+      box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 24px;
+    h1 {
+      margin: 18px 0px;
+      color: whitesmoke;
+      font-size: 20px;
+    }
+    .description {
+      width: 100%;
+      font-size: 18px;
+      color: whitesmoke;
+      margin: 20px 0px;
+    }
+    .contents {
+      display: flex;
+      flex-direction: column;
+      .content {
+        color: whitesmoke;
+        font-size: 18px;
+      }
+    }
+  }
+  }
+}
 
 </style>
