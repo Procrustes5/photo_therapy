@@ -255,6 +255,10 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
 }
+.sizedBox {
+  height: 300px;
+  background: $main;
+}
 .main-image {
   position: absolute;
   transition: opacity 1s ease;
@@ -345,6 +349,10 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   overflow: hidden;
   opacity: 0;
   animation: fadeInUp 1.5s ease-out forwards;
+}
+.sizedBox {
+  height: 300px;
+  background: $main;
 }
 .main-image {
   position: absolute;
