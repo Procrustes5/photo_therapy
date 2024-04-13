@@ -16,7 +16,7 @@ const menuSize = computed(() => {
   if (window.innerWidth < 500) {
     return '40%'
   } else if (window.innerWidth < 769) {
-    return '25%'
+    return '30%'
   } else if (window.innerWidth < 1025) {
     return '20%'
   } else {
