@@ -69,7 +69,11 @@ onMounted(() => {
         const bottom = contentRef.value!.getBoundingClientRect().bottom
         disableScroll();
         setTimeout(enableScroll, 1200); 
-        window.scrollTo({ top: bottom + 315, behavior: "smooth" });
+        if (window.innerWidth < 767) {
+          window.scrollTo({ top: bottom + 290 });
+        } else {
+          window.scrollTo({ top: bottom + 315, behavior: "smooth" });
+        }
       }
     },
     {
