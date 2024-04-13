@@ -89,8 +89,12 @@ setInterval(() => {
   currentIndex.value = (currentIndex.value + 1) % images.length;
 }, 3000);
 const handleMainClick = () => {
-  const top = headerRef.value!.getBoundingClientRect().height
-  window.scrollTo({ top: top + 50, behavior: "smooth" });
+  const bottom = contentRef.value!.getBoundingClientRect().bottom
+  if (window.innerWidth < 767) {
+    window.scrollTo({ top: bottom + 290 });
+  } else {
+    window.scrollTo({ top: bottom + 315, behavior: "smooth" });
+  }
 }
 const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
 </script>
