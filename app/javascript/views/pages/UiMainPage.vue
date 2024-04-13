@@ -92,7 +92,7 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
 </script>
 <template>
   <div class="wrapper">
-    <div class="header" @click="handleMainClick" v-if="isSlideShown">
+    <div class="header" @click="handleMainClick">
     <div 
       class="main-image" 
       v-for="(image, index) in images"
@@ -111,7 +111,6 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
     <!-- <div class="prepare">This page is preparing for Official Launch</div> -->
   </div>
 </div>
-<div class="header" v-else></div>
 <div class="sizedBox" ref="headerRef"></div>
 <div class="sizedBox" ref="contentRef"></div>
 <div class="content">
