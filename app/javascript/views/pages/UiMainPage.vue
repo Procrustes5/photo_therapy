@@ -49,7 +49,7 @@ onMounted(() => {
         isSlideShown.value = true
         disableScroll();
         setTimeout(enableScroll, 1200); 
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({ top: 0 });
         closeMenu();
       } else {
         isSlideShown.value = false
@@ -66,10 +66,10 @@ onMounted(() => {
     (entries) => {
       const firstEntry = entries[0];
       if (firstEntry.isIntersecting) {
-        const top = headerRef.value!.getBoundingClientRect().height
+        const bottom = contentRef.value!.getBoundingClientRect().bottom
         disableScroll();
         setTimeout(enableScroll, 1200); 
-        window.scrollTo({ top: top + 50, behavior: "smooth" });
+        window.scrollTo({ top: bottom + 315, behavior: "smooth" });
       }
     },
     {
@@ -92,13 +92,13 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
 </script>
 <template>
   <div class="wrapper">
-    <div class="header" ref="headerRef" @click="handleMainClick">
-  <div 
-    class="main-image" 
-    v-for="(image, index) in images"
-    :key="index"
-    :class="{ active: index === currentIndex, notHorizontal: image !== image8 }"
-  >
+    <div class="header" @click="handleMainClick" v-if="isSlideShown">
+    <div 
+      class="main-image" 
+      v-for="(image, index) in images"
+      :key="index"
+      :class="{ active: index === currentIndex, notHorizontal: image !== image8 }"
+    >
     <el-image :src="image" class="img"></el-image>
   </div>
   <div class="fixed-content" :class="{ active: currentIndex === 0 }">
@@ -111,8 +111,10 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
     <!-- <div class="prepare">This page is preparing for Official Launch</div> -->
   </div>
 </div>
-<div class="sizedBox"></div>
-<div class="content" ref="contentRef">
+<div class="header" v-else></div>
+<div class="sizedBox" ref="headerRef"></div>
+<div class="sizedBox" ref="contentRef"></div>
+<div class="content">
   <app-header v-if="!isSlideShown" class="main-header"/>
   <UiHomePage></UiHomePage>
   <app-footer/>
@@ -143,7 +145,7 @@ const categories = ["Conatus", "The moment", "Gyeongju", "Docu&Snap"]
   animation: fadeInUp 1.5s ease-out forwards;
 }
 .sizedBox {
-  height: 50px;
+  height: 300px;
   background: $main;
 }
 .main-image {
