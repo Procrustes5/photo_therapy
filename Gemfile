@@ -47,7 +47,7 @@ gem "bootsnap", require: false
 gem 'dotenv'
 group :production do
   # https://github.com/rails/rails/blob/v6.1.4.6/activestorage/lib/active_storage/service/s3_service.rb#L3
-  gem "aws-sdk-s3", '~> 1.48'
+  gem "aws-sdk-s3"
 end
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
