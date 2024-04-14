@@ -115,8 +115,10 @@ const handleLangBtn = (lang) => {
           私の写真は焚き火の中の小さな火花に過ぎない。
         </p>
         <p>
-          しかし、いつかこの火花は散り放ち、あなたの心を暖めるか<br>
-          忘れられた存在の様々な顔が蘇る、そんな写真を残したいと思っている。
+          しかし、いつかこの火花は散り放ち<br>
+          あなたの心を暖めるか、<br>
+          忘れられた存在の様々な顔が蘇る、<br>
+          そんな写真を残したいと思っている。
         </p>
       </div>
 
@@ -135,7 +137,7 @@ const handleLangBtn = (lang) => {
     display: flex;
     align-items: start;
     width: 100%;
-    padding: 0px 15px;
+    padding: 30px 15px;
     box-sizing: border-box;
     .profile-image {
       height: 100%;

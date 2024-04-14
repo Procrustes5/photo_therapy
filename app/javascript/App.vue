@@ -9,7 +9,7 @@ const route = useRoute();
   <div class="app">
     <app-header v-if="route.path!=='/'" />
     <router-view />
-    <app-footer v-if="route.path!=='/'" />
+    <app-footer v-if="route.path!=='/' && route.path!=='/profile'" />
   </div>
 </template>
 <style lang="scss" scoped>
