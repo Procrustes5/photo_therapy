@@ -8,12 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "orval": "rm -rf app/frontend/resources/* && orval --config ./orval.config.ts",
-    "lint": "eslint app/frontend",
+    "orval": "rm -rf app/javascript/resources/* && orval --config ./orval.config.ts",
+    "lint": "eslint app/javascript",
     "lint:fix": "eslint app/javascript --fix",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "prettier": "prettier --write app/frontend"
+    "prettier": "prettier --write app/javascript"
   },
   "devDependencies": {
     "@pinia/testing": "^0.1.3",

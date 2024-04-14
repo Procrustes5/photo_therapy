@@ -17,7 +17,7 @@ const handleLangBtn = (lang) => {
       <div class="detail-header">
         <span class="title" v-if="selectedLang === 'kr'">사진가의 말.</span>
         <span class="title" v-else-if="selectedLang === 'en'">The Photographer's Words.</span>
-        <span class="title" v-else-if="selectedLang === 'jp'">写真家の言葉</span>
+        <span class="title" v-else-if="selectedLang === 'jp'">写真家の一言</span>
         <div class="lang-btns">
           <div class="lang-btn" @click="handleLangBtn('en')" :class="{clicked: selectedLang === 'en'}">EN</div>
           <div class="lang-btn" @click="handleLangBtn('kr')" :class="{clicked: selectedLang === 'kr'}">KR</div>
@@ -92,7 +92,7 @@ const handleLangBtn = (lang) => {
         <p>
           文学を専攻し、<br>
           長らく人文学や文筆と共に<br>
-          写真の作業をしてきた。
+          カメラを触っていた。
         </p>
         <p>
           一時期スピノザやニーチェ、荘子、周易などの人文古典に耽溺し、<br>
