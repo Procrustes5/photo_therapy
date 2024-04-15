@@ -23,27 +23,17 @@ setInterval(() => {
         >
           {{ item }}
         </div>
-        <div class="arrows">
-          <el-icon class="arrow" color="whitesmoke" size="60"><DArrowRight /></el-icon>
-        </div>
-        <div class="icons">
-          <el-icon color="whitesmoke" size="60" :class="['icon', { active: activeIndex === 0 }]"><Sunrise /></el-icon>
-          <el-icon color="whitesmoke" size="60" :class="['icon', { active: activeIndex === 1 }]"><View /></el-icon>
-          <el-icon color="whitesmoke" size="60" :class="['icon', { active: activeIndex === 2 }]"><UserFilled /></el-icon>
-          <el-icon color="whitesmoke" size="60" :class="['icon', { active: activeIndex === 3 }]"><ChatDotSquare /></el-icon>
-          <el-icon color="whitesmoke" size="60" :class="['icon', { active: activeIndex === 4 }]"><Picture /></el-icon>
-        </div>
       </div>
     </div>
     <div class="page-right">
       <h1>Main Concept : pañca-skandha(五蘊)</h1>
       <span class="description">The photographs are based on the Buddhist concept of the Five Aggregates. The Five Aggregates discuss how we perceive and receive objects, which is highly relevant to photography. This concept is also associated with achieving mental peace and healing through photographs.</span>
       <div class="contents">
-        <span class="content">rupa 色蘊 : Form</span>
-        <span class="content">vedana 受蘊 : Sensation</span>
-        <span class="content">saṃjñā 想蘊 : Apperception</span>
-        <span class="content">saṃskāra 行蘊 : Thought-fabrications</span>
-        <span class="content">vijñāna 識蘊 : Perception</span>
+        <span class="content">rupa 色蘊</span>
+        <span class="content">vedana 受蘊</span>
+        <span class="content">saṃjñā 想蘊</span>
+        <span class="content">saṃskāra 行蘊</span>
+        <span class="content">vijñāna 識蘊</span>
       </div>
     </div>
   </div>
@@ -83,9 +73,6 @@ setInterval(() => {
     }
   }
 }
-.arrows {
-  transform: translate(-77px, -75px) rotate(-52deg);
-}
 .donut {
   position: relative;
   width: 300px;
@@ -96,22 +83,7 @@ setInterval(() => {
   align-items: center;
   justify-content: center;
 }
-.icons {
-  width: 35%;
-  height: 35%;
-  border: 4px solid whitesmoke;
-  border-radius: 50%;
-  transform: translate(-28px, 0px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .icon {
-    display: none;
-  }
-  .active {
-    display: flex;
-  }
-}
+
 .circle {
   width: 60px;
   height: 60px;
