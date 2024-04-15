@@ -56,17 +56,16 @@ const handleLangBtn = (lang) => {
           잊혀진 존재의 수많은 표정들이 되살아 나는, 그런 사진을 찍으려고 나는 늘 노력하고 있다.
         </p>
       </div>
-      <div v-else-if="selectedLang === 'en'" :class="{isEnglish: selectedLang === 'en'}">
+      <div v-else-if="selectedLang === 'en'">
 
         <p>
           After majoring in literature,<br>
-          I have been engaged in the study of the humanities and writing<br>
-          while working on my photography.
+          I have been engaged in the study of the humanities <br>
+          and writing while working on my photography.
         </p>
         <p>
-          At one point, I was deeply immersed in humanistic classics <br>
-          such as Spinoza, Nietzsche, Zhuangzi, and the I Ching.<br>
-          Now, I am primarily capturing images rooted in the awareness of Buddhism's 'Five Aggregates' (pañca-skandha) and Spinoza's 'Conatus'.
+          At one point, I was deeply immersed in humanistic classics such as Spinoza, Nietzsche, Zhuangzi, and the I Ching.<br>
+          Now, I am primarily capturing images rooted in the awareness of Buddhism's 'Five Aggregates' (Pancakkhandha) and Spinoza's 'Conatus'.
         </p>
         <p>
           I have held two solo exhibitions.<br>
@@ -192,79 +191,6 @@ const handleLangBtn = (lang) => {
           font-size: 18px;
         }
       }
-      .isEnglish {
-        font-size: 18px;
-      }
     }
   }
-@media screen and (max-width:767px) {
-  h1, h3 {
-    color: whitesmoke;
-  }
-  .profile-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 30px 15px;
-    box-sizing: border-box;
-    .profile-image {
-      width: 100%;
-      .img {
-        width: 100%;
-      }
-    }
-    .profile-detail {
-      box-sizing: border-box;
-      width: 100%;
-      padding: 0px 10px;
-      span, p, .lang-btn {
-        color: whitesmoke;
-      }
-      .detail-header {
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 20px;
-        align-items: start;
-        justify-content: start;
-        .lang-btns {
-          display: flex;
-          margin-top: 20px;
-        }
-        .lang-btn {
-          width: 72px;
-          height: 28px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid whitesmoke;
-          font-size: 16px;
-          cursor: pointer;
-        }
-        .clicked {
-          background: whitesmoke;
-          color: black;
-        }
-      }
-      .title {
-        font-size: 28px;
-        font-weight: 600;
-      }
-      .dot {
-        margin: 30px 0px;
-      }
-      .sign {
-        margin-top: 28px;
-        display: flex;
-        justify-content: end;
-        .sign-text {
-          font-weight: 600;
-          font-size: 18px;
-        }
-      }
-      .isEnglish {
-        font-size: 18px;
-      }
-    }
-  }
-}
 </style>
