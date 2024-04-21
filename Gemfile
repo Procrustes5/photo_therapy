@@ -49,7 +49,7 @@ gem 'dotenv'
 # 네이버 로그인
 gem 'omniauth'
 gem 'omniauth-naver'
-
+gem 'devise'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
